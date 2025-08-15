@@ -4,11 +4,11 @@ import { FiMapPin } from "react-icons/fi";
 
 const Hero: React.FC = () => {
     return (
-        <section className="hero min-h-screen flex flex-col mt-80">
-            <div className="container mx-auto px-4 ml-20">
-                <h1 className="text-5xl font-bold text-white mb-4">issar manknojiya</h1>
+        <section className="hero flex flex-col mt-60 mb-90">
+            <div className="portfolio-container"> {/* Removed ml-60, added mx-auto */}
+                <h1 className="text-5xl font-bold text-white mb-4">Issar Manknojiya</h1>
                 <p className="text-lg text-white mb-6">
-                    Computer Science @ University of Western Ontario
+                    3rd Year Computer Science @ University of Western Ontario
                     <br />
                     <span className="flex items-center">
                         <FiMapPin className="mr-1" size={16} />
