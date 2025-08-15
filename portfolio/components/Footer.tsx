@@ -2,8 +2,10 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer style={{ textAlign: 'center', padding: '1rem' }}>
-            <p>© 2025 Issar Manknojiya</p>
+        <footer className="py-8 border-t border-gray-600">
+            <div className="portfolio-container">
+                <p className="text-center text-gray-400">© 2025 Issar Manknojiya</p>
+            </div>
         </footer>
     );
 };

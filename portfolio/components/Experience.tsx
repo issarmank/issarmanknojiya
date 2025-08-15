@@ -1,24 +1,34 @@
 import React from 'react';
+import { IoBag } from "react-icons/io5";
 
 const experiences = [
     {
         role: 'Software Engineer',
-        company: 'TechCorp Inc.',
-        duration: 'Jan 2020 - Present',
+        company: 'DevFortress',
+        duration: 'May – Aug 2025',
         description: [
-            'Developed and maintained web applications using React and TypeScript.',
-            'Collaborated with cross-functional teams to deliver high-quality software.',
-            'Optimized application performance, reducing load times by 30%.',
+            'Built TypeScript Obsidian plugin for <300ms Markdown transfer to Athena AI, preserving metadata.',
+            'Implemented secure JWT authentication with token-based API access and session management.',
+            'Enabled secure, real-time AI chat integration for 1M+ Athena AI LLM users.',
         ],
     },
     {
-        role: 'Frontend Developer',
-        company: 'Web Solutions',
-        duration: 'Jun 2018 - Dec 2019',
+        role: 'Software Developer',
+        company: 'Tech for Social Impact',
+        duration: 'Feb – Apr 2025',
         description: [
-            'Designed and implemented responsive user interfaces.',
-            'Worked closely with designers to ensure seamless user experiences.',
-            'Improved codebase maintainability by introducing reusable components.',
+            'Built React + Node.js/Express financial literacy tool with Firebase, impacting 1K+ users.',
+            'Designed UI mockups and UML diagrams in Figma.',
+            'Implemented Firebase + Auth0 authentication, AWS hosting, and 65% uptime.',
+        ],
+    },
+    {
+        role: 'Software Developer',
+        company: 'Western Developers Society',
+        duration: 'Oct 2024 – Mar 2025',
+        description: [
+            'Created React Native + Mapbox campus navigation system with 3D models and real-time GPS.',
+            'Built intelligent routing algorithm with building hours & accessibility support for 30K+ students.',
         ],
     },
 ];
@@ -26,13 +36,20 @@ const experiences = [
 const Experience: React.FC = () => {
     return (
         <section id="experience" className="py-20">
-            <div className="portfolio-container"> {/* Removed ml-60, added mx-auto */}
-                <h2 className="text-3xl font-bold mb-6 text-white">Experience</h2>
+            <div className="portfolio-container">
+                <div className="flex items-center mb-8">
+                    <IoBag className="text-white mr-3" size={28} />
+                    <h2 className="text-3xl font-bold text-white">Experience</h2>
+                </div>
                 <div className="space-y-8">
                     {experiences.map((exp, index) => (
                         <div key={index} className="border-b border-gray-600 pb-4">
-                            <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
-                            <p className="text-gray-400">{exp.company} | {exp.duration}</p>
+                            <div className="flex items-center justify-between mb-2">
+                                <h3 className="text-xl font-semibold text-white">{exp.role} | {exp.company}</h3>
+                                <p className="text-gray-400 text-right">
+                                    {exp.duration}
+                                </p>
+                            </div>
                             <ul className="list-disc list-inside mt-2 text-gray-300">
                                 {exp.description.map((item, idx) => (
                                     <li key={idx}>{item}</li>
