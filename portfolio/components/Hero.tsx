@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     return (
         <section className="hero flex flex-col mt-60 mb-90">
             <div className="portfolio-container"> {/* Removed ml-60, added mx-auto */}
-                <h1 className="text-5xl font-bold text-white mb-4">Issar Manknojiya</h1>
+                <h1 className="text-5xl font-light text-white mb-4">Issar Manknojiya</h1>
                 <p className="text-lg text-white mb-6">
                     3rd Year Computer Science @ University of Western Ontario
                     <br />

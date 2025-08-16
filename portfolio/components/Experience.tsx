@@ -39,13 +39,13 @@ const Experience: React.FC = () => {
             <div className="portfolio-container">
                 <div className="flex items-center mb-8">
                     <IoBag className="text-white mr-3" size={28} />
-                    <h2 className="text-3xl font-bold text-white">Experience</h2>
+                    <h2 className="text-3xl font-light text-white">Experience</h2>
                 </div>
                 <div className="space-y-8">
                     {experiences.map((exp, index) => (
                         <div key={index} className="border-b border-gray-600 pb-4">
                             <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xl font-semibold text-white">{exp.role} | {exp.company}</h3>
+                                <h3 className="text-xl font-ligh text-white">{exp.role} | {exp.company}</h3>
                                 <p className="text-gray-400 text-right">
                                     {exp.duration}
                                 </p>

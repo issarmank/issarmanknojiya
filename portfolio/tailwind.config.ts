@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        poppins: ['var(--font-dm-sans)', 'DM Sans', 'sans-serif'],
+        redhat: ['"Red Hat Text"', 'sans-serif'],
       },
     },
   },

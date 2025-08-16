@@ -22,10 +22,10 @@ const projects = [
         github: 'https://github.com/issarmank/teamscore-database',
     },
     {
-        title: 'Portfolio Website',
-        description: 'Modern responsive site with dark mode toggle',
+        title: 'AI Summary API',
+        description: 'Building an summarization API using OpenAI + FastAPI',
         image: '/placeholder-project4.jpg',
-        github: 'https://github.com/yourusername/portfolio',
+        github: 'https://github.com/issarmank/ai-summary-api',
     }
 ];
 
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
             <div className="portfolio-container">
                 <div className="flex items-center mb-8">
                     <MdBuild className="text-white mr-3" size={26} />
-                    <h2 className="text-3xl font-bold text-white">Projects</h2>
+                    <h2 className="text-3xl font-light text-white">Projects</h2>
                 </div>
                 
                 {/* Grid layout with wider projects */}
@@ -61,10 +61,10 @@ const Projects: React.FC = () => {
                             </div>
                             
                             {/* Text under the box */}
-                            <div className="mt-4">
+                            <div className="mt-5">
                                 {/* Title and GitHub link on same line */}
                                 <div className="flex items-center justify-between mb-2">
-                                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                                    <h3 className="text-xl font-light text-white">{project.title}</h3>
                                     <a 
                                         href={project.github}
                                         target="_blank"

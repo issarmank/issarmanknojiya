@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Red_Hat_Text } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({ 
+const redHat = Red_Hat_Text({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: "--font-dm-sans",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} font-dm-sans antialiased`}>
+      <body className={`${redHat.variable} font-dm-sans antialiased`}>
           <div className="portfolio-container min-h-screen">
             {children}
           </div>
