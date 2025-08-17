@@ -7,9 +7,7 @@ const experiences = [
         company: 'DevFortress',
         duration: 'May – Aug 2025',
         description: [
-            'Built TypeScript Obsidian plugin for <300ms Markdown transfer to Athena AI, preserving metadata.',
-            'Implemented secure JWT authentication with token-based API access and session management.',
-            'Enabled secure, real-time AI chat integration for 1M+ Athena AI LLM users.',
+            'Built TypeScript Obsidian plugin for notetaking and real-time AI chat integration for 1M+ Athena AI LLM users.'
         ],
     },
     {
@@ -17,9 +15,7 @@ const experiences = [
         company: 'Tech for Social Impact',
         duration: 'Feb – Apr 2025',
         description: [
-            'Built React + Node.js/Express financial literacy tool with Firebase, impacting 1K+ users.',
-            'Designed UI mockups and UML diagrams in Figma.',
-            'Implemented Firebase + Auth0 authentication, AWS hosting, and 65% uptime.',
+            'Built a financial literacy tool for Finance4Her impacting almost 1K users.'
         ],
     },
     {
@@ -27,8 +23,7 @@ const experiences = [
         company: 'Western Developers Society',
         duration: 'Oct 2024 – Mar 2025',
         description: [
-            'Created React Native + Mapbox campus navigation system with 3D models and real-time GPS.',
-            'Built intelligent routing algorithm with building hours & accessibility support for 30K+ students.',
+            'Created navigation system with real-time GPS supporting all of Western University campus.'        
         ],
     },
 ];
@@ -43,9 +38,13 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="space-y-8">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="border-b border-gray-600 pb-4">
+                        <div key={index} className="pb-4">
                             <div className="flex items-center justify-between mb-2">
-                                <h3 className="text-xl font-ligh text-white">{exp.role} | {exp.company}</h3>
+                                <h3 className="text-xl font-light text-white flex items-center">
+                                    {exp.role}
+                                    <span className="mx-3 text-gray-400">–</span>
+                                    <span className="text-gray-400">{exp.company}</span>
+                                </h3>
                                 <p className="text-gray-400 text-right">
                                     {exp.duration}
                                 </p>

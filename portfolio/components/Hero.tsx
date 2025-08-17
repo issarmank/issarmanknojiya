@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
             <div className="portfolio-container"> {/* Removed ml-60, added mx-auto */}
                 <h1 className="text-5xl font-light text-white mb-4">Issar Manknojiya</h1>
                 <p className="text-lg text-white mb-6">
-                    3rd Year Computer Science @ University of Western Ontario
+                    Studying Computer Science @ University of Western Ontario
                     <br />
                     <span className="flex items-center">
                         <FiMapPin className="mr-1" size={16} />
