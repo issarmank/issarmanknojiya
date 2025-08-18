@@ -9,7 +9,7 @@ const Socials: React.FC = () => {
                 href="https://github.com/issarmank"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-500 transition duration-300"
+                className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
             >
                 <FaGithub size={28} />
             </a>
@@ -17,7 +17,7 @@ const Socials: React.FC = () => {
                 href="https://www.linkedin.com/in/issar7/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-500 transition duration-300"
+                className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
             >
                 <FaLinkedin size={28} />
             </a>
@@ -25,13 +25,13 @@ const Socials: React.FC = () => {
                 href="https://twitter.com/IssarManknojiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-500 transition duration-300"
+                className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
             >
                 <FaXTwitter size={28} />
             </a>
             <a
                 href="mailto:Issar2005@gmail.com"
-                className="text-white hover:text-blue-500 transition duration-300"
+                className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
             >
                 <FaEnvelope size={28} />
             </a>
@@ -39,7 +39,7 @@ const Socials: React.FC = () => {
                 href="/gallery/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-500 transition duration-300"
+                className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
             >
                 <FaFileAlt size={26} />
             </a>
