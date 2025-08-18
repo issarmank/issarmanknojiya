@@ -31,7 +31,7 @@ const projects = [
 
 const Projects: React.FC = () => {
     return (
-        <section id="projects" className="py-20">
+        <section id="projects" className="py-20 mb-60">
             <div className="portfolio-container">
                 <div className="flex items-center mb-8">
                     <MdBuild className="text-white mr-3" size={26} />
