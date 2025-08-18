@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="text-white p-4" style={{ marginTop: '10px' }}>
-            <div className="portfolio-container items-center">
-                <ul className="flex space-x-6 justify-center">
+        <nav className="portfolio-container bg-black p-4" style={{ marginTop: '10px' }}>
+            <div className="items-center mt-6">
+                <ul className="flex space-x-5 justify-center">
                     <li>
                         <Link 
                             href="/" 

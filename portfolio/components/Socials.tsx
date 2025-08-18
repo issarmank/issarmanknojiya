@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const Socials: React.FC = () => {
@@ -34,6 +34,14 @@ const Socials: React.FC = () => {
                 className="text-white hover:text-blue-500 transition duration-300"
             >
                 <FaEnvelope size={28} />
+            </a>
+            <a
+                href="/gallery/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-500 transition duration-300"
+            >
+                <FaFileAlt size={26} />
             </a>
         </div>
     );
