@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
 import { IoBag } from "react-icons/io5";
+import { FiArrowDown } from "react-icons/fi";
 
 const experiences = [
     {
@@ -29,8 +31,17 @@ const experiences = [
 ];
 
 const Experience: React.FC = () => {
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            const yOffset = 40; // Adjust this value (negative = scroll higher)
+            const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
     return (
-        <section id="experience" className="py-20 mb-60">
+        <section id="experience" className="py-20 mb-40">
             <div className="portfolio-container">
                 <div className="flex items-center mb-8">
                     <IoBag className="text-white mr-3" size={28} />
@@ -56,6 +67,17 @@ const Experience: React.FC = () => {
                             </ul>
                         </div>
                     ))}
+                </div>
+                
+                {/* My Projects Arrow */}
+                <div className="mt-8">
+                    <button 
+                        onClick={scrollToProjects}
+                        className="flex flex-col items-center text-blue-500 hover:text-white transition duration-300 cursor-pointer group"
+                    >
+                        <span className="text-sm mb-2 group-hover:text-white">My Projects</span>
+                        <FiArrowDown size={20} className="animate-bounce" />
+                    </button>
                 </div>
             </div>
         </section>

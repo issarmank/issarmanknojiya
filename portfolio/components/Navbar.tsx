@@ -12,13 +12,13 @@ const Navbar: React.FC = () => {
                         href="/" 
                         className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
                     >
-                        <FaHome size={26} />
+                        <FaHome size={24} />
                     </Link>
                     <Link 
                         href="/photos" 
                         className="text-white hover:text-blue-500 transition duration-300 transform hover:scale-130"
                     >
-                        <FaCamera size={25} />
+                        <FaCamera size={23} />
                     </Link>
                 </div>
             </div>
