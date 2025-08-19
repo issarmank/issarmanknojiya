@@ -4,7 +4,7 @@ import { FiMapPin } from "react-icons/fi";
 
 const Hero: React.FC = () => {
     return (
-        <section className="hero flex flex-col mt-60 mb-90">
+        <section className="hero flex flex-col mt-70 mb-70">
             <div className="portfolio-container">
                 <h1 className="text-5xl font-light text-white mb-4">Issar Manknojiya</h1>
                 <p className="text-lg text-white mb-6">

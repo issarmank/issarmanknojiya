@@ -11,6 +11,9 @@ const redHat = Red_Hat_Text({
 export const metadata: Metadata = {
   title: "Issar Manknojiya - Portfolio",
   description: "Computer Science Student at University of Western Ontario",
+  icons : {
+    icon: "/gallery/initial.jpg",
+  },   
 };
 
 export default function RootLayout({
