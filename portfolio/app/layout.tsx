@@ -9,7 +9,7 @@ const redHat = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Issar Manknojiya - Portfolio",
+  title: "Issar Manknojiya",
   description: "Computer Science Student at University of Western Ontario",
   icons : {
     icon: "/gallery/initial.jpg",

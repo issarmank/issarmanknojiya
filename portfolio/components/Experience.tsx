@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 import { IoBag } from "react-icons/io5";
 import { FiArrowDown } from "react-icons/fi";
 
@@ -30,11 +31,23 @@ const experiences = [
     },
 ];
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 1.5,
+            ease: "easeOut"
+        }
+    }
+};
+
 const Experience: React.FC = () => {
     const scrollToProjects = () => {
         const projectsSection = document.getElementById('projects');
         if (projectsSection) {
-            const yOffset = 40; // Adjust this value (negative = scroll higher)
+            const yOffset = 40;
             const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -43,13 +56,18 @@ const Experience: React.FC = () => {
     return (
         <section id="experience" className="py-20 mb-40">
             <div className="portfolio-container">
-                <div className="flex items-center mb-8">
+                <motion.div variants={itemVariants} className="flex items-center mb-8">
                     <IoBag className="text-white mr-3" size={28} />
                     <h2 className="text-3xl font-light text-white">Experience</h2>
-                </div>
+                </motion.div>
+                
                 <div className="space-y-8">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="pb-4">
+                        <motion.div 
+                            key={index} 
+                            variants={itemVariants}
+                            className="pb-4"
+                        >
                             <div className="flex items-center justify-between mb-2">
                                 <h3 className="text-xl font-light text-white flex items-center">
                                     {exp.role}
@@ -65,12 +83,11 @@ const Experience: React.FC = () => {
                                     <li key={idx}>{item}</li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
                 
-                {/* My Projects Arrow */}
-                <div className="mt-8">
+                <motion.div variants={itemVariants} className="mt-8">
                     <button 
                         onClick={scrollToProjects}
                         className="flex flex-col items-center text-blue-500 hover:text-white transition duration-300 cursor-pointer group"
@@ -78,7 +95,7 @@ const Experience: React.FC = () => {
                         <span className="text-sm mb-2 group-hover:text-white">My Projects</span>
                         <FiArrowDown size={20} className="animate-bounce" />
                     </button>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

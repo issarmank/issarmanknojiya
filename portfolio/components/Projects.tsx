@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { MdBuild } from 'react-icons/md';
 
@@ -24,25 +26,39 @@ const projects = [
     {
         title: 'AI Summary API',
         description: 'Building an summarization API using OpenAI + FastAPI',
-        image: '/placeholder-project4.jpg',
+        image: '/gallery/aisummaryapi.jpg',
         github: 'https://github.com/issarmank/ai-summary-api',
     }
 ];
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 1.5,
+            ease: "easeOut"
+        }
+    }
+};
 
 const Projects: React.FC = () => {
     return (
         <section id="projects" className="py-20 mb-60">
             <div className="portfolio-container">
-                <div className="flex items-center mb-8">
+                <motion.div variants={itemVariants} className="flex items-center mb-8">
                     <MdBuild className="text-white mr-3" size={26} />
                     <h2 className="text-3xl font-light text-white">Projects</h2>
-                </div>
+                </motion.div>
                 
-                {/* Grid layout with wider projects */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
                     {projects.map((project, index) => (
-                        <div key={index} className="group cursor-pointer">
-                            {/* Project Image Box */}
+                        <motion.div 
+                            key={index} 
+                            variants={itemVariants}
+                            className="group cursor-pointer"
+                        >
                             <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-xl">
                                 <div className="h-64 bg-gray-700 flex items-center justify-center">
                                     {project.image ? (
@@ -60,9 +76,7 @@ const Projects: React.FC = () => {
                                 </div>
                             </div>
                             
-                            {/* Text under the box */}
                             <div className="mt-5">
-                                {/* Title and GitHub link on same line */}
                                 <div className="flex items-center justify-between mb-2">
                                     <h3 className="text-xl font-light text-white">{project.title}</h3>
                                     <a 
@@ -77,7 +91,7 @@ const Projects: React.FC = () => {
                                 </div>
                                 <p className="text-gray-400 text-sm">{project.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
