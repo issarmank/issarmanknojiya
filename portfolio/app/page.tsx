@@ -7,12 +7,12 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 
 const fadeInVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 0 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 1.5,
+      duration: 0.8, // Reduced for mobile
       ease: "easeOut"
     }
   }
@@ -23,20 +23,20 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2 // Delay between each child animation
+      staggerChildren: 0.15 // Faster for mobile
     }
   }
 };
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
       <Navbar />
       
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, margin: "-50px" }} // Reduced margin for mobile
         variants={fadeInVariants}
       >
         <Hero />
@@ -45,7 +45,7 @@ export default function Home() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <Experience />
@@ -54,7 +54,7 @@ export default function Home() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
         <Projects />
@@ -63,7 +63,7 @@ export default function Home() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, margin: "-50px" }}
         variants={fadeInVariants}
       >
         <Footer />

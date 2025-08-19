@@ -19,9 +19,27 @@ body {
 }
 
 .portfolio-container {
-  max-width: 896px; /* Same as max-w-4xl */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Same as px-4 */
-  margin-left: 130px; /* Adjusted for centering */
-  margin-right: -1300px; /* Adjusted for centering */
+  padding: 0 1rem; /* Mobile padding */
+}
+
+/* Responsive padding */
+@media (min-width: 640px) {
+  .portfolio-container {
+    padding: 0 2rem; /* Tablet padding */
+  }
+}
+
+@media (min-width: 1024px) {
+  .portfolio-container {
+    padding: 0 3rem; /* Desktop padding */
+  }
+}
+
+/* Ensure all text is readable on mobile */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
 }
