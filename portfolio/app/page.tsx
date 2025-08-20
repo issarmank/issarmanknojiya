@@ -13,7 +13,7 @@ const fadeInVariants = {
     y: 0,
     transition: {
       duration: 0.8, // Reduced for mobile
-      ease: "easeOut"
+      ease: "easeOut" as const, 
     }
   }
 };
