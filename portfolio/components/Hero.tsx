@@ -7,14 +7,17 @@ const Hero: React.FC = () => {
     const scrollToExperience = () => {
         const experienceSection = document.getElementById('experience');
         if (experienceSection) {
-            const yOffset = -100;
+// Different offsets for different screen sizes
+            const isLargeScreen = window.innerWidth >= 1024; // lg breakpoint
+            const yOffset = isLargeScreen ? -150 : -100; // Higher on large screens
+
             const y = experienceSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
 
     return (
-        <section className="hero flex flex-col mt-65 mb-50 sm:mt-60 mb-20 sm:mb-70" style={{alignItems: 'flex-start'}}>
+        <section className="hero flex flex-col mt-65 sm:mt-60 mb-70 sm:mb-96" style={{alignItems: 'flex-start'}}>
             <div className="portfolio-container" style={{marginLeft: '0', marginRight: 'auto'}}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-4 sm:mb-6 text-left">
                     Issar Manknojiya
