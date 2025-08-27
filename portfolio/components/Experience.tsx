@@ -9,24 +9,27 @@ const experiences = [
         role: 'Software Engineer',
         company: 'DevFortress',
         duration: 'May – Aug 2025',
+        website: 'https://devfortress.com/',
         description: [
             'Built TypeScript Obsidian plugin for notetaking and real-time AI chat integration for 1M+ Athena AI LLM users.'
         ],
     },
     {
-        role: 'Software Developer',
-        company: 'Tech for Social Impact',
+        role: 'Full Stack Software Developer',
+        company: 'EmpowerHERto',
         duration: 'Feb – Apr 2025',
+        website: 'https://www.empowherto.org/',
         description: [
-            'Built a financial literacy tool for Finance4Her impacting almost 1K users.'
+            'Built a financial literacy web app using React, Node.js, AuthO, & Supabase.'
         ],
     },
     {
-        role: 'Software Developer',
+        role: 'Backend Software Developer',
         company: 'Western Developers Society',
         duration: 'Oct 2024 – Mar 2025',
+        website: 'https://westerndev-website-theta.vercel.app/',
         description: [
-            'Created navigation system with real-time GPS supporting all of Western University campus.'        
+            'Created navigation system with real-time GPS supporting all of Western University campus using React Native & Mapbox API.'        
         ],
     },
 ];
@@ -72,7 +75,14 @@ const Experience: React.FC = () => {
                                 <h3 className="text-lg sm:text-xl font-light text-white flex flex-col sm:flex-row sm:items-center">
                                     <span>{exp.role}</span>
                                     <span className="hidden sm:inline mx-3 text-gray-400">–</span>
-                                    <span className="text-gray-400 text-base sm:text-xl">{exp.company}</span>
+                                    <a 
+                                        href={exp.website}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-400 text-base sm:text-xl underline hover:text-blue-500 transition-colors duration-300"
+                                    >
+                                        {exp.company}
+                                    </a>
                                 </h3>
                                 <p className="text-gray-400 text-sm sm:text-base">
                                     {exp.duration}

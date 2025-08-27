@@ -10,12 +10,13 @@ const projects = [
         description: 'Using OpenAI API to generate pull request descriptions',
         image: '/gallery/prdevtool.jpg',
         github: 'https://github.com/issarmank/pr-dev-tool',
+        website: 'https://pr-dev-tool.vercel.app/',
     },
     {
         title: 'Emberforge',
         description: 'Built a fully playable game using Unity and C#',
         image: '/gallery/emberforge.jpg',
-        github: 'https://github.com/issarmank/2250-project',
+        github: 'https://github.com/issarmank/emberforge',
     },
     {
         title: 'Team Score Database System',
@@ -60,7 +61,12 @@ const Projects: React.FC = () => {
                             className="group cursor-pointer"
                         >
                             <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
-                                <div className="h-48 sm:h-64 bg-gray-700 flex items-center justify-center">
+                                <a 
+                                    href={project.website || project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block h-48 sm:h-64 bg-gray-700 flex items-center justify-center"
+                                >
                                     {project.image ? (
                                         <img 
                                             src={project.image} 
@@ -73,7 +79,7 @@ const Projects: React.FC = () => {
                                             <p className="text-sm">Project Image</p>
                                         </div>
                                     )}
-                                </div>
+                                </a>
                             </div>
                             
                             <div className="mt-4 sm:mt-5">
