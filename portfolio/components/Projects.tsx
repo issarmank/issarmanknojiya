@@ -29,6 +29,12 @@ const projects = [
         description: 'Building an summarization API using OpenAI + FastAPI',
         image: '/gallery/aisummaryapi.jpg',
         github: 'https://github.com/issarmank/ai-summary-api',
+    },
+    {
+        title: 'Devops Dashboard for Cloud Monitoring',
+        description: 'A devops dashboard to monitor cloud infrastructure and metrics',
+        image: '/gallery/devopsdashboard.jpg',
+        github: 'https://github.com/issarmank/devops-dashboard',
     }
 ];
 
