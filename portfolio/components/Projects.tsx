@@ -35,6 +35,12 @@ const projects = [
         description: 'A devops dashboard to monitor cloud infrastructure and metrics',
         image: '/gallery/devopsdashboard.jpg',
         github: 'https://github.com/issarmank/devops-dashboard',
+    },
+    {
+        title: 'Syllabus Parser',
+        description: 'Openai + Langchain based syllabus parser to extract course info',
+        image: '/gallery/syllabus-parser.jpg',
+        github: 'https://github.com/issarmank/syllabus-parser',
     }
 ];
 

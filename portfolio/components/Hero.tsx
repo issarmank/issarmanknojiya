@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         if (experienceSection) {
 // Different offsets for different screen sizes
             const isLargeScreen = window.innerWidth >= 1024; // lg breakpoint
-            const yOffset = isLargeScreen ? -150 : -100; // Higher on large screens
+            const yOffset = isLargeScreen ? -100 : -100; // Higher on large screens
 
             const y = experienceSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });

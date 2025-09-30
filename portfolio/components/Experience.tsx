@@ -6,7 +6,16 @@ import { FiArrowDown } from "react-icons/fi";
 
 const experiences = [
     {
-        role: 'Software Engineer',
+        role: 'Machine Learning Engineer',
+        company: '3D Western',
+        duration: 'Sep 2025 – Present',
+        website: 'https://www.3dwestern.ca/',
+        description: [
+            'Slicing datasets and building ml models to automate 3D printing process'
+        ],
+    },
+    {
+        role: 'Software Engineering Intern',
         company: 'DevFortress',
         duration: 'May – Aug 2025',
         website: 'https://devfortress.com/',
