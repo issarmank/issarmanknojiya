@@ -41,6 +41,7 @@ const projects = [
         description: 'Openai + Langchain based syllabus parser to extract course info',
         image: '/gallery/syllabus-parser.jpg',
         github: 'https://github.com/issarmank/syllabus-parser',
+        website: 'https://syllabus-parser-alpha.vercel.app/',
     }
 ];
 
