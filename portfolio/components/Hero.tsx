@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <section className="hero flex flex-col mt-65 sm:mt-60 mb-70 sm:mb-96" style={{alignItems: 'flex-start'}}>
+        <section className="hero flex flex-col mt-65 sm:mt-60 mb-60 sm:mb-80" style={{alignItems: 'flex-start'}}>
             <div className="portfolio-container" style={{marginLeft: '0', marginRight: 'auto'}}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-4 sm:mb-6 text-left">
                     Issar Manknojiya

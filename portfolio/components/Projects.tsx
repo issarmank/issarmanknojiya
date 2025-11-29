@@ -42,6 +42,13 @@ const projects = [
         image: '/gallery/syllabus-parser.jpg',
         github: 'https://github.com/issarmank/syllabus-parser',
         website: 'https://syllabus-parser-alpha.vercel.app/',
+    },
+    {
+        title: 'Repository Visualizer',
+        description: '3D interactive visualization of GitHub repositories using Three.js',
+        image: '',
+        github: 'https://github.com/issarmank/repository-visualizer',
+        website: 'https://github.com/issarmank/repository-visualizer',
     }
 ];
 
