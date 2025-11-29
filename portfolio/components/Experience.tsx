@@ -7,6 +7,15 @@ import { FiArrowDown } from "react-icons/fi";
 const experiences = [
     {
         role: 'Machine Learning Engineer',
+        company: 'Western Cyber Society',
+        duration: 'Nov 2025 – Present',
+        website: 'https://www.westerncybersociety.ca/',
+        description: [
+            'Creating a pipeline of impersonation/intention nlp models to detect email phishing '
+        ],
+    },
+    {
+        role: 'Machine Learning Engineer',
         company: '3D Western',
         duration: 'Sep 2025 – Present',
         website: 'https://www.3dwestern.ca/',
