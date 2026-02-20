@@ -46,9 +46,16 @@ const projects = [
     {
         title: 'Repository Visualizer',
         description: '3D interactive visualization of GitHub repositories using Three.js',
-        image: '',
+        image: '/gallery/repovisual.jpg',
         github: 'https://github.com/issarmank/repository-visualizer',
         website: 'https://github.com/issarmank/repository-visualizer',
+    },
+    {
+        title: 'Turtle (Command Line Interface Agent)',
+        description: 'Runs terminal commands with a Ollama based tool-calling agent',
+        image: '/gallery/turtle.jpg',
+        github: 'https://github.com/issarmank/qhacks-cli-agent',
+        website: 'https://github.com/issarmank/qhacks-cli-agent',
     }
 ];
 
