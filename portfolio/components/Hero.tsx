@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                     <br />
                     <span className="flex items-center justify-start mt-2">
                         <FiMapPin className="mr-1" size={16} />
-                        Austin, Texas
+                        Guelph, Ontario
                     </span>
                 </p>
                 <div className="flex justify-start space-x-4 sm:space-x-6 mb-6 sm:mb-8">
