@@ -6,42 +6,25 @@ import { MdBuild } from 'react-icons/md';
 
 const projects = [
     {
-        title: 'AI PR Dev Tool',
-        description: 'Using OpenAI API to generate pull request descriptions',
-        image: '/gallery/prdevtool.jpg',
-        github: 'https://github.com/issarmank/pr-dev-tool',
-        website: 'https://pr-dev-tool.vercel.app/',
+        title: 'FinGuard AI',
+        description: 'AI native full-stack personal finance app tracker',
+        image: '/gallery/finguardai.jpg',
+        github: 'https://github.com/issarmank/finguard-ai',
+        website: 'https://github.com/issarmank/finguard-ai',
     },
     {
-        title: 'Emberforge',
-        description: 'Built a fully playable game using Unity and C#',
-        image: '/gallery/emberforge.jpg',
-        github: 'https://github.com/issarmank/emberforge',
+        title: 'Agentify',
+        description: 'RAG based document agent using short/long term memory retrieval',
+        image: '/gallery/agentify.jpg',
+        github: 'https://github.com/issarmank/agentic-rag-system',
+        website: 'https://agentic-rag-system-ashy.vercel.app/',
     },
     {
-        title: 'Team Score Database System',
-        description: 'Full stack team management application using JavaFX and SQL',
-        image: '/gallery/javafx.jpg',
-        github: 'https://github.com/issarmank/teamscore-database',
-    },
-    {
-        title: 'AI Summary API',
-        description: 'Building an summarization API using OpenAI + FastAPI',
-        image: '/gallery/aisummaryapi.jpg',
-        github: 'https://github.com/issarmank/ai-summary-api',
-    },
-    {
-        title: 'Devops Dashboard for Cloud Monitoring',
-        description: 'A devops dashboard to monitor cloud infrastructure and metrics',
-        image: '/gallery/devopsdashboard.jpg',
-        github: 'https://github.com/issarmank/devops-dashboard',
-    },
-    {
-        title: 'Syllabus Parser',
-        description: 'Openai + Langchain based syllabus parser to extract course info',
-        image: '/gallery/syllabus-parser.jpg',
-        github: 'https://github.com/issarmank/syllabus-parser',
-        website: 'https://syllabus-parser-alpha.vercel.app/',
+        title: 'Turtle (Command Line Interface Agent)',
+        description: 'Runs terminal commands with a Ollama based tool-calling agent',
+        image: '/gallery/turtle.jpg',
+        github: 'https://github.com/issarmank/qhacks-cli-agent',
+        website: 'https://github.com/issarmank/qhacks-cli-agent',
     },
     {
         title: 'Repository Visualizer',
@@ -51,12 +34,37 @@ const projects = [
         website: 'https://github.com/issarmank/repository-visualizer',
     },
     {
-        title: 'Turtle (Command Line Interface Agent)',
-        description: 'Runs terminal commands with a Ollama based tool-calling agent',
-        image: '/gallery/turtle.jpg',
-        github: 'https://github.com/issarmank/qhacks-cli-agent',
-        website: 'https://github.com/issarmank/qhacks-cli-agent',
-    }
+        title: 'Syllabus Parser',
+        description: 'Openai + Langchain based syllabus parser to extract course info',
+        image: '/gallery/syllabus-parser.jpg',
+        github: 'https://github.com/issarmank/syllabus-parser',
+        website: 'https://syllabus-parser-alpha.vercel.app/',
+    },
+    {
+        title: 'Devops Dashboard for Cloud Monitoring',
+        description: 'A devops dashboard to monitor cloud infrastructure and metrics',
+        image: '/gallery/devopsdashboard.jpg',
+        github: 'https://github.com/issarmank/devops-dashboard',
+    },
+    {
+        title: 'Team Score Database System',
+        description: 'Full stack team management application using JavaFX and SQL',
+        image: '/gallery/javafx.jpg',
+        github: 'https://github.com/issarmank/teamscore-database',
+    },
+    {
+        title: 'Emberforge',
+        description: 'Built a fully playable game using Unity and C#',
+        image: '/gallery/emberforge.jpg',
+        github: 'https://github.com/issarmank/emberforge',
+    },
+    {
+        title: 'AI PR Dev Tool',
+        description: 'Using OpenAI API to generate pull request descriptions',
+        image: '/gallery/prdevtool.jpg',
+        github: 'https://github.com/issarmank/pr-dev-tool',
+        website: 'https://pr-dev-tool.vercel.app/',
+    },
 ];
 
 const itemVariants = {
