@@ -6,11 +6,25 @@ import { MdBuild } from 'react-icons/md';
 
 const projects = [
     {
+        title: 'JobPilot',
+        description: 'Job app tracker with Chrome extension, Github API, & Adzuna',
+        image: '/gallery/jobapp.jpg',
+        github: 'https://github.com/issarmank/autopilot-job-application',
+        website: 'https://github.com/issarmank/autopilot-job-application',
+    },
+    {
+        title: 'Fight Club Agents',
+        description: '20 Autonomous agents fighting in realtime using Websockets, Next.js, and Azure',
+        image: '/gallery/fightclubagents.jpg',
+        github: 'https://github.com/issarmank/fight-club-agents',
+        website: 'https://fight-club-agents.vercel.app/',
+    },
+    {
         title: 'FinGuard AI',
         description: 'AI native full-stack personal finance app tracker',
         image: '/gallery/finguardai.jpg',
         github: 'https://github.com/issarmank/finguard-ai',
-        website: 'https://github.com/issarmank/finguard-ai',
+        website: 'https://finguard-tracker-ai.vercel.app/',
     },
     {
         title: 'Agentify',

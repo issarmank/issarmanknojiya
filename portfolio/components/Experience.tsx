@@ -8,7 +8,7 @@ const experiences = [
     {
         role: 'Data Operations Intern',
         company: 'SmartOne.ai',
-        duration: 'May 2026 – Present',
+        duration: 'May 2026 – June 2026',
         website: 'https://smartone.ai/',
         description: [
             'Working on a robotics data collection & annotation project'
@@ -17,7 +17,7 @@ const experiences = [
     {
         role: 'Machine Learning Engineer',
         company: '3D Western',
-        duration: 'Sep 2025 – Present',
+        duration: 'Sep 2025 – Apr 2026',
         website: 'https://www.3dwestern.ca/',
         description: [
             'Slicing datasets and building ml models to automate 3D printing process'
