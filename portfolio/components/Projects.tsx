@@ -1,10 +1,17 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
-import { MdBuild } from 'react-icons/md';
+import { FiExternalLink } from 'react-icons/fi';
 
 const projects = [
+    {
+        title: 'Prompt Polish',
+        description: 'Improves your AI prompts inside your favorite LLMs',
+        image: '/gallery/promptpolish.jpg',
+        github: 'https://github.com/issarmank/prompt-improver-extension',
+        website: 'https://blue-ground-0ec325e0f.7.azurestaticapps.net/',
+    },
     {
         title: 'JobPilot',
         description: 'Job app tracker with Chrome extension, Github API, & Adzuna',
@@ -34,7 +41,7 @@ const projects = [
         website: 'https://agentic-rag-system-ashy.vercel.app/',
     },
     {
-        title: 'Turtle (Command Line Interface Agent)',
+        title: 'Turtle (CLI Agent)',
         description: 'Runs terminal commands with a Ollama based tool-calling agent',
         image: '/gallery/turtle.jpg',
         github: 'https://github.com/issarmank/qhacks-cli-agent',
@@ -55,7 +62,7 @@ const projects = [
         website: 'https://syllabus-parser-alpha.vercel.app/',
     },
     {
-        title: 'Devops Dashboard for Cloud Monitoring',
+        title: 'Devops Dashboard for Monitoring',
         description: 'A devops dashboard to monitor cloud infrastructure and metrics',
         image: '/gallery/devopsdashboard.jpg',
         github: 'https://github.com/issarmank/devops-dashboard',
@@ -83,72 +90,135 @@ const projects = [
 
 const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-        opacity: 1, 
+    visible: {
+        opacity: 1,
         y: 0,
         transition: {
             duration: 0.6,
-            ease: "easeOut" as const, 
+            ease: "easeOut" as const,
         }
     }
 };
 
+type ViewMode = 'grid' | 'list';
+
 const Projects: React.FC = () => {
+    const [viewMode, setViewMode] = useState<ViewMode>('grid');
+
     return (
-        <section id="projects" className="py-16 sm:py-20 mb-20 sm:mb-60">
+        <section id="projects" className="py-8 sm:py-20 mb-20 sm:mb-60">
             <div className="portfolio-container">
-                <motion.div variants={itemVariants} className="flex items-center justify-start mb-6 sm:mb-8">
-                    <MdBuild className="text-white mr-3" size={24} />
-                    <h2 className="text-2xl sm:text-3xl font-light text-white">Projects</h2>
-                </motion.div>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
-                    {projects.map((project, index) => (
-                        <motion.div 
-                            key={index} 
-                            variants={itemVariants}
-                            className="group cursor-pointer"
+                <motion.div variants={itemVariants} className="flex items-center justify-between mb-6 sm:mb-8">
+                    <div className="flex items-center">
+                        <h2 className="text-2xl sm:text-3xl font-light text-black">Projects</h2>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm sm:text-base">
+                        <button
+                            onClick={() => setViewMode('grid')}
+                            className={`underline-offset-4 transition-colors duration-300 ${
+                                viewMode === 'grid'
+                                    ? 'text-black underline font-medium'
+                                    : 'text-gray-500 hover:text-black'
+                            }`}
                         >
-                            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full">
-                                <a 
-                                    href={project.website || project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block h-48 sm:h-64 bg-gray-700 flex items-center justify-center"
-                                >
-                                    {project.image ? (
-                                        <img 
-                                            src={project.image} 
+                            Grid
+                        </button>
+                        <span className="text-gray-300">/</span>
+                        <button
+                            onClick={() => setViewMode('list')}
+                            className={`underline-offset-4 transition-colors duration-300 ${
+                                viewMode === 'list'
+                                    ? 'text-black underline font-medium'
+                                    : 'text-gray-500 hover:text-black'
+                            }`}
+                        >
+                            List
+                        </button>
+                    </div>
+                </motion.div>
+
+                {viewMode === 'grid' ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                        {projects.map((project, index) => (
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="group"
+                            >
+                                <h3 className="text-lg sm:text-xl font-light text-black mb-2">{project.title}</h3>
+                                {project.image && (
+                                    <div className="w-full h-40 sm:h-48 rounded-md overflow-hidden mb-3">
+                                        <img
+                                            src={project.image}
                                             alt={project.title}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
-                                    ) : (
-                                        <div className="text-gray-400 text-center">
-                                            <div className="text-3xl mb-2">📱</div>
-                                            <p className="text-sm">Project Image</p>
-                                        </div>
-                                    )}
-                                </a>
-                            </div>
-                            
-                            <div className="mt-4 sm:mt-5">
-                                <div className="flex items-center justify-between mb-2">
-                                    <h3 className="text-lg sm:text-xl font-light text-white">{project.title}</h3>
-                                    <a 
+                                    </div>
+                                )}
+                                <p className="text-gray-600 text-sm sm:text-base mb-3">{project.description}</p>
+                                <div className="flex items-center gap-3">
+                                    <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-2 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors duration-300"
+                                        className="text-black hover:text-blue-600 transition-colors duration-300"
                                         title="View on GitHub"
                                     >
-                                        <FaGithub size={15} />
+                                        <FaGithub size={18} />
                                     </a>
+                                    {project.website && (
+                                        <a
+                                            href={project.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-black hover:text-blue-600 transition-colors duration-300"
+                                            title="View Live"
+                                        >
+                                            <FiExternalLink size={18} />
+                                        </a>
+                                    )}
                                 </div>
-                                <p className="text-gray-400 text-sm sm:text-base">{project.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="max-w-3xl divide-y divide-gray-200">
+                        {projects.map((project, index) => (
+                            <motion.div
+                                key={index}
+                                variants={itemVariants}
+                                className="py-4 sm:py-5 flex items-start justify-between gap-4"
+                            >
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-light text-black">{project.title}</h3>
+                                    <p className="text-gray-600 text-sm sm:text-base mt-1">{project.description}</p>
+                                </div>
+                                <div className="shrink-0 flex items-center gap-3">
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-black hover:text-blue-600 transition-colors duration-300"
+                                        title="View on GitHub"
+                                    >
+                                        <FaGithub size={18} />
+                                    </a>
+                                    {project.website && (
+                                        <a
+                                            href={project.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-black hover:text-blue-600 transition-colors duration-300"
+                                            title="View Live"
+                                        >
+                                            <FiExternalLink size={18} />
+                                        </a>
+                                    )}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );
