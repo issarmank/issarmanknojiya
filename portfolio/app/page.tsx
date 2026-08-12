@@ -1,9 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 
 const fadeInVariants = {
@@ -31,8 +29,6 @@ const containerVariants = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
-      
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -41,16 +37,7 @@ export default function Home() {
       >
         <Hero />
       </motion.div>
-      
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={containerVariants}
-      >
-        <Experience />
-      </motion.div>
-      
+
       <motion.div
         initial="hidden"
         whileInView="visible"
