@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Red_Hat_Text } from "next/font/google";
+import Navbar from "../components/Navbar";
 import "./globals.css";
 
 const redHat = Red_Hat_Text({ 
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${redHat.variable} font-dm-sans antialiased`}>
+          <Navbar />
           <div className="portfolio-container min-h-screen">
             {children}
           </div>
