@@ -3,7 +3,7 @@ import React from 'react';
 
 const navLinks = [
     { label: 'GitHub', href: 'https://github.com/issarmank', external: true },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/issar7/', external: true },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/issarmank', external: true },
     { label: 'Email', href: 'mailto:Issar2005@gmail.com', external: false },
     { label: 'Resume', href: '/gallery/resume.pdf', external: true },
 ];

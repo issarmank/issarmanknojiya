@@ -6,6 +6,13 @@ import { FiExternalLink } from 'react-icons/fi';
 
 const projects = [
     {
+        title: 'Parrdon.us',
+        description: 'Speech therapy that analyzes your speaking patterns & improving your voice',
+        image: '/gallery/parrdonus.jpg',
+        github: 'https://github.com/issarmank/htn-speech-therapist-2026',
+        website: 'https://www.parrdon.us/welcome',
+    },
+    {
         title: 'Prompt Polish',
         description: 'Improves your AI prompts inside your favorite LLMs',
         image: '/gallery/promptpolish.jpg',

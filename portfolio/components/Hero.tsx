@@ -3,11 +3,11 @@ import React from 'react';
 import { FiMapPin, FiArrowDown } from "react-icons/fi";
 
 const experience = [
-    { company: 'SmartOne.ai', role: 'ops intern', website: 'https://smartone.ai/', year: '2026' },
+    { company: 'Bellwether Investment Management', role: 'ai & automation intern', website: 'https://www.bellvest.ca/', year: '2026' },
     { company: '3D Western', role: 'ml dev', website: 'https://www.3dwestern.ca/', year: '2025' },
     { company: 'DevFortress', role: 'swe intern', website: 'https://devfortress.com/', year: '2025' },
-    { company: 'EmpowerHERto', role: 'dev', website: 'https://www.empowherto.org/', year: '2025' },
-    { company: 'Western Developers Society', role: 'dev', website: 'https://westerndev-website-theta.vercel.app/', year: '2024' },
+    { company: 'EmpowerHERto', role: 'fullstack dev', website: 'https://www.empowherto.org/', year: '2025' },
+    { company: 'Western Developers Society', role: 'backend dev', website: 'https://westerndev-website-theta.vercel.app/', year: '2024' },
 ];
 
 const Hero: React.FC = () => {
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-[max-content_max-content_1fr] gap-x-12 gap-y-2 sm:gap-y-3 lg:min-w-[280px] text-sm sm:text-base">
+                    <div className="grid grid-cols-[max-content_max-content_max-content] gap-x-8 lg:gap-x-12 gap-y-2 sm:gap-y-3 lg:min-w-[280px] text-sm sm:text-base">
                         {experience.map((exp) => (
                             <React.Fragment key={exp.company}>
                                 <span className="text-gray-400 whitespace-nowrap">{exp.year}</span>
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
                                 >
                                     {exp.company}
                                 </a>
-                                <span className="text-gray-500">{exp.role}</span>
+                                <span className="text-gray-500 sm:whitespace-nowrap">{exp.role}</span>
                             </React.Fragment>
                         ))}
                     </div>
