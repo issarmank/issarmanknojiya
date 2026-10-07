@@ -3,7 +3,7 @@ import React from 'react';
 import { FiMapPin, FiArrowDown } from "react-icons/fi";
 
 const experience = [
-    { company: 'Bellwether Investment Management', role: 'ai & automation intern', website: 'https://www.bellvest.ca/', year: '2026' },
+    { company: 'Bellwether Investment Management', role: 'swe intern', website: 'https://www.bellvest.ca/', year: '2026' },
     { company: '3D Western', role: 'ml dev', website: 'https://www.3dwestern.ca/', year: '2025' },
     { company: 'DevFortress', role: 'swe intern', website: 'https://devfortress.com/', year: '2025' },
     { company: 'EmpowerHERto', role: 'fullstack dev', website: 'https://www.empowherto.org/', year: '2025' },
