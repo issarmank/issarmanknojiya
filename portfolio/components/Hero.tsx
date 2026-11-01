@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                         </p>
                         <p className="flex items-center text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 text-left">
                             <FiMapPin className="mr-1" size={16} />
-                            Guelph, Ontario
+                            Austin, Texas
                         </p>
 
                         {/* More About Me Arrow */}
